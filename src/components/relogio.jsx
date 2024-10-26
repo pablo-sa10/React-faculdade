@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './relogio.css'; // Importando CSS específico
+// import './relogio.css'; // Importando CSS específico
 
 function Relogio() {
   const [horaAtual, setHoraAtual] = useState(new Date().toLocaleTimeString());
