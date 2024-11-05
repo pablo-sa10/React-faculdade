@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './letreiro.css'; // Importando CSS específico
+import './letreiro.css'; 
 
 function Letreiro() {
   const texto = 'Conheça a Fatec ';
