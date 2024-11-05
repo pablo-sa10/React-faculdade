@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Relogio from './components/relogio';
 import Letreiro from './components/letreiro';
+import Contador from './components/contador';
 import './App.css'; // Importando o CSS
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
           </Link>
           <Link to="/letreiro">
             <button>Atividade 2: Letreiro</button>
+          </Link>
+          <Link to="/contador">
+            <button>Atividade 3: Contador</button>
           </Link>
         </nav>
 
@@ -34,16 +38,15 @@ function App() {
               </div>
             }
           />
+          <Route
+            path="/contador"
+            element={
+              <div className="component">
+                <Contador />
+              </div>
+            }
+          />
         </Routes>
-
-        <Route
-          path="/contador"
-          element={
-            <div className="component">
-              <Contador/>
-            </div>
-          }
-        />
       </div>
     </Router>
   );
