@@ -35,6 +35,15 @@ function App() {
             }
           />
         </Routes>
+
+        <Route
+          path="/contador"
+          element={
+            <div className="component">
+              <Contador/>
+            </div>
+          }
+        />
       </div>
     </Router>
   );
