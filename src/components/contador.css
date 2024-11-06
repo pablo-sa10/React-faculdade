@@ -50,6 +50,48 @@
 
 .div-pessoas{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 50px;
+    padding: 0 200px 0 200px;
+}
+
+#div-mulher,
+#div-homem{
+    width: 50%;
+}
+
+.total-sexo{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.div-btns{
+    margin-top: 10px;
+    display: felx;
+    justify-content: space-between;
+}
+
+.btn-add{
+    width: 20%;
+    border-radius: 20px;
+    font-size: 30px;
+    background-color: rgb(18, 196, 18);
+    color: white;
+    border: none;
+}
+
+.btn-add:hover,
+.btn-remove:hover{
+    cursor: pointer;
+    background-color: #e6f3b1;
+}
+
+.btn-remove{
+    width: 20%;
+    border-radius: 20px;
+    font-size: 30px;
+    background-color: rgb(196, 18, 18);
+    color: white;
+    border: none;
 }
