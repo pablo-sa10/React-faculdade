@@ -7,28 +7,41 @@ function Contador() {
     const [totalPessoas, setTotalPessoas] = useState(0);
     const [men, setMen] = useState(0);
     const [women, setWomen] = useState(0);
-
     function addMan() {
-        setMen(prevMen => prevMen + 1);
-        setTotalPessoas(prevTotal => prevTotal + 1);
+        setMen(prevMen => {
+            setTotalPessoas(prevTotal => prevTotal + 1);
+            return prevMen + 1;
+        });
     }
 
     function removeMan() {
-        setMen(prevMen => (prevMen > 0 ? prevMen - 1 : 0));
-        setTotalPessoas(prevTotal => (prevTotal > 0 ? prevTotal - 1 : 0));
+        setMen(prevMen => {
+            if (prevMen > 0) {
+                setTotalPessoas(prevTotal => (prevTotal > 0 ? prevTotal - 1 : 0));
+                return prevMen - 1;
+            }
+            return prevMen;
+        });
     }
 
     function addWoman() {
-        setWomen(prevWomen => prevWomen + 1);
-        setTotalPessoas(prevTotal => prevTotal + 1);
+        setWomen(prevWomen => {
+            setTotalPessoas(prevTotal => prevTotal + 1);
+            return prevWomen + 1;
+        });
     }
 
     function removeWoman() {
-        setWomen(prevWomen => (prevWomen > 0 ? prevWomen - 1 : 0));
-        setTotalPessoas(prevTotal => (prevTotal > 0 ? prevTotal - 1 : 0));
+        setWomen(prevWomen => {
+            if (prevWomen > 0) {
+                setTotalPessoas(prevTotal => (prevTotal > 0 ? prevTotal - 1 : 0));
+                return prevWomen - 1;
+            }
+            return prevWomen;
+        });
     }
 
-    function refresh(){
+    function refresh() {
         setMen(prevMen => prevMen = 0);
         setWomen(prevWomen => prevWomen = 0);
         setTotalPessoas(prevTotal => prevTotal = 0);
