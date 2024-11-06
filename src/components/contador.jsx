@@ -28,6 +28,12 @@ function Contador() {
         setTotalPessoas(prevTotal => (prevTotal > 0 ? prevTotal - 1 : 0));
     }
 
+    function refresh(){
+        setMen(prevMen => prevMen = 0);
+        setWomen(prevWomen => prevWomen = 0);
+        setTotalPessoas(prevTotal => prevTotal = 0);
+    }
+
     return (<div className="div-principal">
         <div className="div-head">
             <div className="div-total">
@@ -35,7 +41,7 @@ function Contador() {
                 <div id="total" className="total">{totalPessoas}</div>
             </div>
             <div className="refresh-button">
-                <button>Refresh</button>
+                <button onClick={refresh}>Refresh</button>
             </div>
         </div>
         <div className="div-pessoas">
